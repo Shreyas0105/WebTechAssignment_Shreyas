@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume - Student</title>
+    <style>
+        :root{
+            --bg-0: #f7fbff;
+            --bg-1: #f4f6f9;
+            --accent: #3498db;
+            --nav: #2c3e50;
+            --muted: #7f8c8d;
+            --card: #ffffff;
+        }
+
+        *{margin:0;padding:0;box-sizing:border-box}
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+            line-height:1.6;
+            color:#333;
+            background: linear-gradient(180deg,var(--bg-0),var(--bg-1));
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+        }
+
+        /* Navigation */
+        nav{
+            background:var(--nav);
+            padding:0.6rem 1rem;
+            text-align:center;
+            position:sticky;
+            top:0;
+            z-index:50;
+            box-shadow:0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        nav a{
+            color:#fff;
+            text-decoration:none;
+            padding:8px 16px;
+            margin:0 6px;
+            border-radius:6px;
+            display:inline-block;
+            opacity:0.95;
+            transition:transform .15s ease, background .15s ease;
+        }
+
+        nav a:hover{transform:translateY(-2px);background:#34495e}
+
+        nav a.active{background:var(--accent);box-shadow:0 4px 14px rgba(52,152,219,0.18)}
+
+        /* Container */
+        .container{max-width:900px;margin:24px auto;padding:24px}
+
+        /* Pages */
+        .page{display:none;background:var(--card);padding:28px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+        .page.active{display:block;animation:fadeIn .28s ease}
+
+        @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+        /* Header */
+        .header{text-align:center;padding:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;border-radius:10px;margin-bottom:20px}
+
+        h1{margin-bottom:8px;font-size:1.6rem}
+
+        h2{color:#2c3e50;border-bottom:2px solid var(--accent);padding-bottom:10px;margin-bottom:18px}
+
+        h3{color:#34495e;margin-top:14px}
+
+        /* Table */
+        table{width:100%;border-collapse:collapse;margin:18px 0}
+        table td{padding:12px;border-bottom:1px solid #eee}
+        table td:first-child{font-weight:600;color:#2c3e50;width:160px}
+
+        /* Lists */
+        ul{margin-left:20px;margin-top:10px}
+        li{margin-bottom:8px}
+
+        /* Section */
+        .section{margin-bottom:26px}
+
+        /* Skills */
+        .skill{margin-bottom:14px}
+
+        .skill-bar{background:#e9eef7;height:20px;border-radius:10px;overflow:hidden;margin-top:6px}
+
+        .skill-level{background:linear-gradient(90deg,var(--accent),#2980b9);height:100%;text-align:center;color:white;line-height:20px;font-size:12px;transition:width 1s ease-in-out}
+
+        /* Contact Form */
+        input,textarea{width:100%;padding:10px;margin-bottom:15px;border:1px solid #e0e6ef;border-radius:6px}
+
+        button{background:var(--accent);color:white;padding:12px 28px;border:none;border-radius:6px;cursor:pointer;font-size:15px}
+        button:hover{background:#2980b9}
+
+        .date{color:var(--muted);font-style:italic}
+
+        footer{text-align:center;padding:20px;color:var(--muted)}
+
+        /* Responsive tweaks */
+        @media (max-width:600px){
+            nav a{padding:8px 12px;margin:0 4px}
+            .container{padding:12px;margin:12px}
+            h1{font-size:1.25rem}
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="nav-link active" onclick="showPage('home')">Home</a>
+        <a href="#" class="nav-link" onclick="showPage('resume')">Resume</a>
+        <a href="#" class="nav-link" onclick="showPage('biodata')">Bio-Data</a>
+        <a href="#" class="nav-link" onclick="showPage('contact')">Contact</a>
+    </nav>
+
+    <div class="container">
+        <!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <div class="header">
+                <h1>Shreyas Shetty - 4MW23CS155</h1>
+                <p>Computer Science Engineering Student</p>
+                <p>📧 shreyas.23cs155@sode-edu.in | 📱 +91 8867766272</p>
+            </div>
+
+            <div class="section">
+                <h2>About Me</h2>
+                <p>
+                    Hey! I'm a third-year Computer Science Engineering student passionate about 
+                    web development and programming. I love building projects and learning new technologies. 
+                    Currently focusing on full-stack development and looking for internship opportunities.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>What I'm Learning</h2>
+                <ul>
+                    <li>📚 Data Structures & Algorithms</li>
+                    <li>💻 Full Stack Web Development</li>
+                    <li>🌐 ReactJS and NodeJS</li>
+                    <li>🗄️ Database Management</li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <!-- RESUME PAGE -->
+        <div id="resume" class="page">
+            <h2>Resume</h2>
+
+            <div class="section">
+                <h3>Education</h3>
+                <p><strong>Bachelor of Engineering in Computer Science</strong></p>
+                <p class="date">SMVITM Bantakal | 2023 - 2027</p>
+                <p>Current CGPA: 7.75/10</p>
+                <br>
+                <p><strong>12th Standard (PUC)</strong></p>
+                <p class="date">Udupi Jnanasudha</p>
+    
+                <br>
+                <p><strong>10th Standard (SSLC)</strong></p>
+                <p class="date">Madhava Kripa</p>
+            </div>
+
+            <div class="section">
+                <h3>Technical Skills</h3>
+                
+                <div class="skill">
+                    <strong>C/C++ Programming</strong>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%">90%</div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <strong>Python</strong>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%">90%</div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <strong>HTML/CSS/JavaScript</strong>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%">80%</div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <strong>Java</strong>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%">75%</div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <strong>MongoDB</strong>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 60%">60%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Projects</h3>
+                <p><strong>1.Smart Fitness Tracker</strong></p>
+                <p class="date">Technologies: React,NodeJS,ExpressJS,MongoDB</p>
+                <p>Developed a smart fitness tracker for fitness enthusiasts.</p>
+                <br>
+                <p><strong>2. Personal Portfolio Website</strong></p>
+                <p class="date">Technologies: HTML, CSS, JavaScript</p>
+                <p>Created a responsive portfolio website showcasing my skills and projects.</p>
+                <br>
+                <p><strong>2. Learnify</strong></p>
+                <p class="date">Technologies: React,NodeJS,ExpressJS,MongoDB</p>
+                <p>AI powered tool to generate summary,flashcard and quiz from notes.</p>
+            </div>
+
+            <div class="section">
+                <h3>Certifications</h3>
+                <ul>
+                    <li>Python Programming - Coursera</li>
+                    <li>Web Development Bootcamp - Udemy</li>
+                    <li>Data Structures & Algorithms - Apna College</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Achievements</h3>
+                <ul>
+                    <li>🏆 Won Interschool Cricket chapionship</li>
+                    <li>⭐ Won multiple in school Cricket competitions</li>
+                    <li>🎖️ Participated in National level Ideathon</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- BIO-DATA PAGE -->
+        <div id="biodata" class="page">
+            <h2>Bio-Data</h2>
+
+            <table>
+                <tr>
+                    <td>Full Name</td>
+                    <td>Shreyas Shetty</td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td>1 May 2005</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>20 Years</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <td>Nationality</td>
+                    <td>Indian</td>
+                </tr>
+                <tr>
+                    <td>Religion</td>
+                    <td>Hindu</td>
+                </tr>
+                <tr>
+                    <td>Languages Known</td>
+                    <td>Hindi, English, Kannada, Tulu</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>Vaishnavi,Onthibettu,Bommarabetu village,Hiriadka,Udupi</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>shreyas.23cs155@sode-edu.in</td>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td>+91 8867766272</td>
+                </tr>
+                <tr>
+                    <td>Hobbies</td>
+                    <td>Cricket,Cycling,Swimming,Travel</td>
+                </tr>
+            </table>
+
+            <div class="section">
+                <h3>Career Objective</h3>
+                <p>
+                    To secure an internship position in a reputed company where I can utilize my 
+                    technical skills and knowledge. Looking forward to learning from experienced 
+                    professionals and contributing to meaningful projects.
+                </p>
+            </div>
+        </div>
+
+        <!-- CONTACT PAGE -->
+        <div id="contact" class="page">
+            <h2>Contact Me</h2>
+
+            <div class="section">
+                <h3>Get in Touch</h3>
+                <p><strong>📧 Email:</strong> shreyas.23cs155@sode-edu.in</p>
+                <p><strong>📱 Phone:</strong> +91 8867766272</p>
+                <p><strong>📍 Location:</strong> Udupi, Karnataka, India</p>
+                <p><strong>💻 GitHub:</strong> github.com/Shreyas0105</p>
+            </div>
+
+            <div class="section">
+                <h3>Send a Message</h3>
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="email" id="email" placeholder="Your Email">
+                <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+                <button onclick="sendMessage()">Send Message</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Shreyas Shetty.</p>
+    </footer>
+
+    <script>
+        // Function to show different pages
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Remove active from all nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Add active to clicked nav link
+            event.target.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Contact form function
+        function sendMessage() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                alert('Thanks ' + name + '! Your message has been sent successfully!');
+                // Clear form
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+            } else {
+                alert('Please fill all the fields!');
+            }
+        }
+    </script>
+</body>
+</html>
