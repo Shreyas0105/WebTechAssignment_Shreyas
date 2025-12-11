@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-wrapper">
+            <header>
+                <h1>Registration Form</h1>
+                <p>Join our community today!</p>
+            </header>
+
+            <form id="registrationForm">
+                <div class="input-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Shreyas Shetty" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="shreyas@example.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+91 8942398471" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="3" placeholder="123 Main St, City, Country"
+                        required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="course">Select Course</label>
+                    <select id="course" name="course" required>
+                        <option value="" disabled selected>Choose a course...</option>
+                        <option value="web-dev">Web Development</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="ui-ux">UI/UX Design</option>
+                        <option value="cloud-computing">Cloud Computing</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitBtn">Register Now</button>
+            </form>
+
+            <div id="resultContainer" class="hidden">
+                <!-- Result will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+https://shreyas.page.gd
